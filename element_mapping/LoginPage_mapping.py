@@ -1,0 +1,5 @@
+LAB_WELCOME_MESSAGE = 'xpath://h1[@id="kc-page-title"]'
+TXT_INVALID_CREDENTIAL_MESSAGE = 'xpath://label[@class="kc-feedback-text"]'
+TXT_USERNAME = 'xpath://input[@id="username"]'
+TXT_PASSWORD = 'xpath://input[@id="password"]'
+BTN_LOGIN = 'xpath://input[@id="kc-login"]'
