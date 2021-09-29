@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.9.7 on darwin)" generated="20210928 16:39:44.906" rpa="false" schemaversion="2">
-<suite id="s1" name="Login" source="/Users/alexandrereboucas/Desktop/CGD_daily-banking-web/features/login.robot">
-<test id="s1-t1" name="Scenario: Performing a Succesfull Login on Daily Banking Web">
+<robot generator="Robot 4.1.1 (Python 3.9.7 on darwin)" generated="20210929 19:49:29.879" rpa="false" schemaversion="2">
+<suite id="s1" name="Homepage" source="/Users/alexandrereboucas/Desktop/CGD_daily-banking-web/features/homepage.robot">
+<test id="s1-t1" name="Scenario: Verify Favorite Current Accounts Added to Dashboard">
 <kw name="Open Web browser" library="Hooks" type="SETUP">
 <arg>https://app.tst.cgd.live.backbaseservices.com/business-banking-app</arg>
 <arg>firefox</arg>
@@ -9,218 +9,169 @@
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210928 16:39:45.064" level="INFO">Opening browser 'firefox' to base url 'https://app.tst.cgd.live.backbaseservices.com/business-banking-app'.</msg>
-<msg timestamp="20210928 16:39:45.064" level="INFO">Firefox driver log is always forced to to: /Users/alexandrereboucas/Desktop/CGD_daily-banking-web/features/geckodriver-23.log</msg>
-<status status="PASS" starttime="20210928 16:39:45.063" endtime="20210928 16:39:48.128"/>
+<msg timestamp="20210929 19:49:30.039" level="INFO">Opening browser 'firefox' to base url 'https://app.tst.cgd.live.backbaseservices.com/business-banking-app'.</msg>
+<msg timestamp="20210929 19:49:30.040" level="INFO">Firefox driver log is always forced to to: /Users/alexandrereboucas/Desktop/CGD_daily-banking-web/features/geckodriver-30.log</msg>
+<status status="PASS" starttime="20210929 19:49:30.039" endtime="20210929 19:49:33.075"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210928 16:39:48.129" endtime="20210928 16:39:48.722"/>
+<status status="PASS" starttime="20210929 19:49:33.075" endtime="20210929 19:49:33.700"/>
 </kw>
-<status status="PASS" starttime="20210928 16:39:45.063" endtime="20210928 16:39:48.723"/>
+<status status="PASS" starttime="20210929 19:49:30.039" endtime="20210929 19:49:33.700"/>
 </kw>
 <kw name="Given I am in the login page" library="LoginPage_keywords">
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20210928 16:39:48.723" endtime="20210928 16:39:48.724"/>
-</kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${LAB_WELCOME_MESSAGE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:39:48.724" endtime="20210928 16:39:51.966"/>
+<status status="PASS" starttime="20210929 19:49:33.701" endtime="20210929 19:49:34.135"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${TXT_USERNAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:39:51.966" endtime="20210928 16:39:53.989"/>
+<status status="PASS" starttime="20210929 19:49:34.135" endtime="20210929 19:49:34.149"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${TXT_PASSWORD}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:39:53.989" endtime="20210928 16:39:56.054"/>
+<status status="PASS" starttime="20210929 19:49:34.149" endtime="20210929 19:49:34.163"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${BTN_LOGIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:39:56.055" endtime="20210928 16:39:58.082"/>
+<status status="PASS" starttime="20210929 19:49:34.163" endtime="20210929 19:49:34.177"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${TMP_WELCOME}</var>
 <arg>${LAB_WELCOME_MESSAGE}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20210928 16:40:00.112" level="INFO">${TMP_WELCOME} = Bem vindo(a) à Caixa.</msg>
-<status status="PASS" starttime="20210928 16:39:58.083" endtime="20210928 16:40:00.112"/>
+<msg timestamp="20210929 19:49:34.192" level="INFO">${TMP_WELCOME} = Bem vindo(a) à Caixa.</msg>
+<status status="PASS" starttime="20210929 19:49:34.177" endtime="20210929 19:49:34.193"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${TMP_WELCOME}</arg>
 <arg>${TXT_WELCOME_PT_MESSAGE}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20210928 16:40:00.112" endtime="20210928 16:40:00.113"/>
+<status status="PASS" starttime="20210929 19:49:34.193" endtime="20210929 19:49:34.193"/>
 </kw>
-<status status="PASS" starttime="20210928 16:39:48.723" endtime="20210928 16:40:00.113"/>
+<status status="PASS" starttime="20210929 19:49:33.700" endtime="20210929 19:49:34.193"/>
 </kw>
-<kw name="And I inform my credentials" library="LoginPage_keywords">
-<arg>300000098</arg>
+<kw name="Given I am in the login page" library="LoginPage_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LAB_WELCOME_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210929 19:49:34.194" endtime="20210929 19:49:34.207"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TXT_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210929 19:49:34.207" endtime="20210929 19:49:34.220"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TXT_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210929 19:49:34.221" endtime="20210929 19:49:34.236"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BTN_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210929 19:49:34.236" endtime="20210929 19:49:34.251"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TMP_WELCOME}</var>
+<arg>${LAB_WELCOME_MESSAGE}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210929 19:49:34.260" level="INFO">${TMP_WELCOME} = Bem vindo(a) à Caixa.</msg>
+<status status="PASS" starttime="20210929 19:49:34.251" endtime="20210929 19:49:34.260"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${TMP_WELCOME}</arg>
+<arg>${TXT_WELCOME_PT_MESSAGE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210929 19:49:34.260" endtime="20210929 19:49:34.261"/>
+</kw>
+<status status="PASS" starttime="20210929 19:49:34.194" endtime="20210929 19:49:34.261"/>
+</kw>
+<kw name="When I inform my credentials" library="LoginPage_keywords">
+<arg>300000099</arg>
 <arg>666777</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${TXT_USERNAME}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210928 16:40:00.114" level="INFO">Typing text '300000098' into text field 'xpath://input[@id="username"]'.</msg>
-<status status="PASS" starttime="20210928 16:40:00.114" endtime="20210928 16:40:03.144"/>
+<msg timestamp="20210929 19:49:34.262" level="INFO">Typing text '300000099' into text field 'xpath://input[@id="username"]'.</msg>
+<status status="PASS" starttime="20210929 19:49:34.262" endtime="20210929 19:49:34.281"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${TXT_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210928 16:40:03.145" level="INFO">Typing text '666777' into text field 'xpath://input[@id="password"]'.</msg>
-<status status="PASS" starttime="20210928 16:40:03.144" endtime="20210928 16:40:06.179"/>
+<msg timestamp="20210929 19:49:34.282" level="INFO">Typing text '666777' into text field 'xpath://input[@id="password"]'.</msg>
+<status status="PASS" starttime="20210929 19:49:34.281" endtime="20210929 19:49:34.307"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BTN_LOGIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210928 16:40:06.180" level="INFO">Clicking element 'xpath://input[@id="kc-login"]'.</msg>
-<status status="PASS" starttime="20210928 16:40:06.179" endtime="20210928 16:40:08.582"/>
+<msg timestamp="20210929 19:49:34.308" level="INFO">Clicking element 'xpath://input[@id="kc-login"]'.</msg>
+<status status="PASS" starttime="20210929 19:49:34.307" endtime="20210929 19:49:34.664"/>
 </kw>
-<status status="PASS" starttime="20210928 16:40:00.113" endtime="20210928 16:40:08.582"/>
+<status status="PASS" starttime="20210929 19:49:34.261" endtime="20210929 19:49:34.664"/>
 </kw>
-<kw name="Then I need to be taken to my homepage" library="HomePage_keywords">
+<kw name="Then I must be taken to my homepage" library="HomePage_keywords">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${TXT_CLIENT_NAME}</arg>
-<arg>30</arg>
+<arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:40:08.583" endtime="20210928 16:40:14.939"/>
+<status status="PASS" starttime="20210929 19:49:34.665" endtime="20210929 19:49:38.772"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${SCR_NAME}</var>
 <arg>${TXT_CLIENT_NAME}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20210928 16:40:16.958" level="INFO">${SCR_NAME} = Carlos do Carmo</msg>
-<status status="PASS" starttime="20210928 16:40:14.940" endtime="20210928 16:40:16.958"/>
+<msg timestamp="20210929 19:49:38.782" level="INFO">${SCR_NAME} = Ana Moura</msg>
+<status status="PASS" starttime="20210929 19:49:38.772" endtime="20210929 19:49:38.782"/>
 </kw>
 <kw name="Convert To Upper Case" library="String">
 <var>${SCR_NAME}</var>
 <arg>${SCR_NAME}</arg>
 <doc>Converts string to upper case.</doc>
-<msg timestamp="20210928 16:40:16.959" level="INFO">${SCR_NAME} = CARLOS DO CARMO</msg>
-<status status="PASS" starttime="20210928 16:40:16.958" endtime="20210928 16:40:16.959"/>
+<msg timestamp="20210929 19:49:38.782" level="INFO">${SCR_NAME} = ANA MOURA</msg>
+<status status="PASS" starttime="20210929 19:49:38.782" endtime="20210929 19:49:38.782"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${SCR_NAME}</arg>
 <arg>${CLIENT_FULLNAME}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20210928 16:40:16.959" endtime="20210928 16:40:16.960"/>
+<status status="PASS" starttime="20210929 19:49:38.782" endtime="20210929 19:49:38.783"/>
 </kw>
-<status status="PASS" starttime="20210928 16:40:08.583" endtime="20210928 16:40:16.960"/>
+<status status="PASS" starttime="20210929 19:49:34.665" endtime="20210929 19:49:38.783"/>
 </kw>
-<status status="PASS" starttime="20210928 16:39:45.062" endtime="20210928 16:40:16.960"/>
-</test>
-<test id="s1-t2" name="Scenario: Performing a Failed Login on Daily Banking Web">
-<kw name="Open Web browser" library="Hooks" type="SETUP">
-<arg>https://app.tst.cgd.live.backbaseservices.com/business-banking-app</arg>
-<arg>firefox</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210928 16:40:16.963" level="INFO">Opening browser 'firefox' to base url 'https://app.tst.cgd.live.backbaseservices.com/business-banking-app'.</msg>
-<msg timestamp="20210928 16:40:16.964" level="INFO">Firefox driver log is always forced to to: /Users/alexandrereboucas/Desktop/CGD_daily-banking-web/features/geckodriver-24.log</msg>
-<status status="PASS" starttime="20210928 16:40:16.962" endtime="20210928 16:40:21.879"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210928 16:40:21.880" endtime="20210928 16:40:23.490"/>
-</kw>
-<status status="PASS" starttime="20210928 16:40:16.962" endtime="20210928 16:40:23.490"/>
-</kw>
-<kw name="Given I am in the login page" library="LoginPage_keywords">
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20210928 16:40:23.491" endtime="20210928 16:40:23.491"/>
-</kw>
+<kw name="And I need to see all my favorite current accounts" library="HomePage_keywords">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${LAB_WELCOME_MESSAGE}</arg>
+<arg>${TXT_FAVORITES_BAR}</arg>
+<arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:40:23.491" endtime="20210928 16:40:25.521"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${TXT_USERNAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:40:25.521" endtime="20210928 16:40:27.538"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${TXT_PASSWORD}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:40:27.538" endtime="20210928 16:40:29.568"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BTN_LOGIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:40:29.568" endtime="20210928 16:40:31.595"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${TMP_WELCOME}</var>
-<arg>${LAB_WELCOME_MESSAGE}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20210928 16:40:33.619" level="INFO">${TMP_WELCOME} = Bem vindo(a) à Caixa.</msg>
-<status status="PASS" starttime="20210928 16:40:31.596" endtime="20210928 16:40:33.620"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${TMP_WELCOME}</arg>
-<arg>${TXT_WELCOME_PT_MESSAGE}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20210928 16:40:33.620" endtime="20210928 16:40:33.620"/>
-</kw>
-<status status="PASS" starttime="20210928 16:40:23.491" endtime="20210928 16:40:33.621"/>
-</kw>
-<kw name="And I inform my credentials" library="LoginPage_keywords">
-<arg>300000098</arg>
-<arg>999999</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${TXT_USERNAME}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210928 16:40:33.622" level="INFO">Typing text '300000098' into text field 'xpath://input[@id="username"]'.</msg>
-<status status="PASS" starttime="20210928 16:40:33.621" endtime="20210928 16:40:36.655"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${TXT_PASSWORD}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210928 16:40:36.656" level="INFO">Typing text '999999' into text field 'xpath://input[@id="password"]'.</msg>
-<status status="PASS" starttime="20210928 16:40:36.655" endtime="20210928 16:40:39.692"/>
+<status status="PASS" starttime="20210929 19:49:38.784" endtime="20210929 19:49:39.689"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${BTN_LOGIN}</arg>
+<arg>${PANEL_FAVORITE_ACCOUNT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210928 16:40:39.693" level="INFO">Clicking element 'xpath://input[@id="kc-login"]'.</msg>
-<status status="PASS" starttime="20210928 16:40:39.692" endtime="20210928 16:40:42.076"/>
+<msg timestamp="20210929 19:49:39.690" level="INFO">Clicking element 'xpath://div[contains(text(), "Conta à ordem 5000000000002")]/ancestor::div[@class="card bb-accounts--favorite bb-accounts-current-account"]'.</msg>
+<status status="PASS" starttime="20210929 19:49:39.690" endtime="20210929 19:49:40.031"/>
 </kw>
-<status status="PASS" starttime="20210928 16:40:33.621" endtime="20210928 16:40:42.076"/>
+<status status="PASS" starttime="20210929 19:49:38.783" endtime="20210929 19:49:40.032"/>
 </kw>
-<kw name="Then I need to receive an error message and not be allowed to proceed" library="HomePage_keywords">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${TXT_INVALID_CREDENTIAL_MESSAGE}</arg>
-<arg>30</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210928 16:40:42.077" endtime="20210928 16:40:44.105"/>
-</kw>
-<status status="PASS" starttime="20210928 16:40:42.076" endtime="20210928 16:40:44.105"/>
-</kw>
-<status status="PASS" starttime="20210928 16:40:16.961" endtime="20210928 16:40:44.106"/>
+<status status="PASS" starttime="20210929 19:49:30.038" endtime="20210929 19:49:40.032"/>
 </test>
-<status status="PASS" starttime="20210928 16:39:44.907" endtime="20210928 16:40:44.107"/>
+<status status="PASS" starttime="20210929 19:49:29.882" endtime="20210929 19:49:40.033"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Homepage">Homepage</stat>
 </suite>
 </statistics>
 <errors>

@@ -14,12 +14,8 @@ Test Setup      Open Web browser  https://app.tst.cgd.live.backbaseservices.com/
 
 *** Test Cases ***
 
-Scenario: Perform a Succesfull Login on Daily Banking Web
+Scenario: Verify Favorite Current Accounts Added to Dashboard    Given I am in the login page
         Given I am in the login page
         When I inform my credentials    300000099  666777
         Then I must be taken to my homepage
-
-Scenario: Perform a Failed Login on Daily Banking Web
-        Given I am in the login page
-        When I inform my credentials    300000099  999999
-        Then I need to receive an error message and not be allowed to proceed
+        And I need to see all my favorite current accounts
