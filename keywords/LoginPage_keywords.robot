@@ -10,7 +10,6 @@ Variables      ../data/LoginPage_data.py
 
 *** Keywords ***
 I am in the login page
-    Set Selenium Speed  1
     Wait until element is visible   ${LAB_WELCOME_MESSAGE}
     Wait until element is visible   ${TXT_USERNAME}
     Wait until element is visible   ${TXT_PASSWORD}
@@ -24,6 +23,7 @@ I inform my credentials
     Input Text      ${TXT_USERNAME}   ${username}
     Input Text      ${TXT_PASSWORD}   ${password}
     Click Element   ${BTN_LOGIN}
+
 
 
 ##========================================================================

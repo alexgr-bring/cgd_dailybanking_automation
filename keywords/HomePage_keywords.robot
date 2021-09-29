@@ -11,11 +11,15 @@ Variables      ../data/HomePage_data.py
 
 
 *** Keywords ***
-I need to be taken to my homepage
-    Wait until element is visible                       ${TXT_CLIENT_NAME}  30
+I must be taken to my homepage
+    Wait until element is visible                       ${TXT_CLIENT_NAME}  10
     ${SCR_NAME}                   Get Text              ${TXT_CLIENT_NAME}
     ${SCR_NAME}                   Convert To Uppercase  ${SCR_NAME}
     Should Be Equal As Strings    ${SCR_NAME}           ${CLIENT_FULLNAME}
 
 I need to receive an error message and not be allowed to proceed
-    Wait until element is visible                       ${TXT_INVALID_CREDENTIAL_MESSAGE}  30
+    Wait until element is visible   ${TXT_INVALID_CREDENTIAL_MESSAGE}  10
+
+I need to see all my favorite current accounts
+    Wait until element is visible   ${TXT_FAVORITES_BAR}  10
+    Click Element                    ${PANEL_FAVORITE_ACCOUNT}
