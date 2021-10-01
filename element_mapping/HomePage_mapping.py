@@ -1,3 +1,6 @@
 TXT_CLIENT_NAME = 'xpath://div[@class="user-context-menu-info__name"]'
 TXT_FAVORITES_BAR = 'xpath://h2[contains(text(), "Favoritos")]'
-PANEL_FAVORITE_ACCOUNT = 'xpath://div[contains(text(), "Conta à ordem 5000000000002")]/ancestor::div[@class="card bb-accounts--favorite bb-accounts-current-account"]'
+PANEL_FAVORITE_ACCOUNT = 'xpath://bb-product-summary-loading[@classes="bb-account-favorites-loader"]//child::div[@class="bb-product-item-card__name" and contains(text(), "Conta corrente Azores")]'
+LAB_FAVORITE_ACCOUNT_DESCRIPTION = 'xpath://div[@class="card bb-accounts--favorite bb-accounts-current-account"]//child::div[contains(text(), "Conta corrente Azores")]'
+LAB_FAVORITE_ACCOUNT_IBAN = 'xpath://div[@class="card bb-accounts--favorite bb-accounts-current-account"]//child::div[contains(text(), "PT50 0035 0186 0590 8571 4745 8")]'
+LAB_FAVORITE_ACCOUNT_AMMOUNT = 'xpath://div[@class="card bb-accounts--favorite bb-accounts-current-account"]//child::span[contains(text(), "8.475")]'
