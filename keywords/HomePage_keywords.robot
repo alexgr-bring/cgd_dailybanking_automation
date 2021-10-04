@@ -11,21 +11,20 @@ Variables      ../data/HomePage_data.py
 
 
 *** Keywords ***
-I need to see all the accounts associated to me
-    Wait until element is visible         ${TXT_FAVORITES_BAR}                  10
-    Wait until element is visible         ${LAB_FAVORITE_ACCOUNT_DESCRIPTION}   10
-    ${ACCOUNT_DESCRIPTION}    Get Text    ${LAB_FAVORITE_ACCOUNT_DESCRIPTION}
-    ${ACCOUNT_IBAN}           Get Text    ${LAB_FAVORITE_ACCOUNT_IBAN}
-    ${ACCOUNT_AMMOUNT}        Get Text    ${LAB_FAVORITE_ACCOUNT_AMMOUNT}
-    Set Suite Variable                    ${ACCOUNT_DESCRIPTION}
-    Set Suite Variable                    ${ACCOUNT_IBAN}
-    Set Suite Variable                    ${ACCOUNT_AMMOUNT}
-
-I need to see the details of these favorite accounts
-    Wait until element is visible         ${PANEL_FAVORITE_ACCOUNT}             10
-    Click Element                         ${PANEL_FAVORITE_ACCOUNT}
 
 I am logged on the application
-    [Arguments]     ${username}       ${password}
+    [Arguments]   ${arg_username}   ${arg_password}
     I am in the login page
-    I inform my credentials    ${username}    ${password}
+    I inform my credentials           ${arg_username}    ${arg_password}
+
+I choose the Accounts menu option on Account and Cards section
+    Wait until element is visible     ${MAP_MENU_OPTION_ACCOUNTS}           10
+    Click Element                     ${MAP_MENU_OPTION_ACCOUNTS}
+
+I choose the Social Security menu option on Payments section
+    Wait until element is visible     ${MAP_MENU_OPTION_SOCIAL_SECURITY}    10
+    Click Element                     ${MAP_MENU_OPTION_SOCIAL_SECURITY}
+
+I choose the Services menu option on Payments section
+    Wait until element is visible     ${MAP_MENU_OPTION_SERVICES}    10
+    Click Element                     ${MAP_MENU_OPTION_SERVICES}
