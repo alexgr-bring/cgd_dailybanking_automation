@@ -3,7 +3,7 @@
 Library        SeleniumLibrary
 Library        BuiltIn
 
-Resource       ../keywords/LoginPage_keywords.robot
+Resource       ../steps/LoginPage_steps.robot
 
 Variables      ../element_mapping/HomePage_mapping.py
 
@@ -14,7 +14,6 @@ Variables      ../data/HomePage_data.py
 
 I am logged on the application
     [Arguments]   ${arg_username}   ${arg_password}
-    Set Selenium Speed    1
     I am in the login page
     I inform my credentials           ${arg_username}    ${arg_password}
 

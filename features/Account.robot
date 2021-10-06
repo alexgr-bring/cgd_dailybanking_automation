@@ -6,8 +6,8 @@ Library        BuiltIn
 Resource       ../support/BDDConfig.robot
 Resource       ../support/Hooks.robot
 
-Resource       ../keywords/HomePage_keywords.robot
-Resource       ../keywords/AccountsPage_keywords.robot
+Resource       ../steps/HomePage_steps.robot
+Resource       ../steps/AccountsPage_steps.robot
 
 Test Setup      Open Web browser  https://app.tst.cgd.live.backbaseservices.com/business-banking-app  firefox
 #Test Teardown   Close browser opened

@@ -12,6 +12,7 @@ Variables      ../data/LoginPage_data.py
 
 
 *** Keywords ***
+
 I am in the login page
     Wait until element is visible                               ${MAP_WELCOME_MESSAGE}
     Wait until element is visible                               ${MAP_USERNAME}
