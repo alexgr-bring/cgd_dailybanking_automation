@@ -16,7 +16,7 @@ Test Setup      Open Web browser  https://app.tst.cgd.live.backbaseservices.com/
 *** Test Cases ***
 
 Scenario: Submit a Social Security Payment Successfully
-    [Tags]                                                SP1
+    [Tags]  SP1-AC1
     Given I am logged on the application  300000004  159357
     And I choose the Social Security menu option on Payments section
     When I fill out the social security payment form with the right values
@@ -24,7 +24,7 @@ Scenario: Submit a Social Security Payment Successfully
     Then The review payment screen should be successfully presented
 
 Scenario: Submit a Service Payment Successfully
-    [Tags]                                                SP1
+    [Tags]  SP1-AC1
 
     Given I am logged on the application  300000004  159357
     And I choose the Services menu option on Payments section

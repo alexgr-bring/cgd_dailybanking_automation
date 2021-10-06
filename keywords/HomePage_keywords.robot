@@ -14,6 +14,7 @@ Variables      ../data/HomePage_data.py
 
 I am logged on the application
     [Arguments]   ${arg_username}   ${arg_password}
+    Set Selenium Speed    1
     I am in the login page
     I inform my credentials           ${arg_username}    ${arg_password}
 

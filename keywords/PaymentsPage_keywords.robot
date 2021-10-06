@@ -13,13 +13,11 @@ Variables      ../data/PaymentsPage_data.py
 *** Keywords ***
 
 I fill out the social security payment form with the right values
-    Set Selenium Speed    1
     Wait until element is visible                           ${MAP_SCREEN_NAME}                                                    10
     ${VAR_SCREEN_NAME}                Get Text              ${MAP_SCREEN_NAME}
     ${VAR_SCREEN_NAME}                Convert To Uppercase  ${VAR_SCREEN_NAME}
     Should Be Equal As Strings                              ${VAR_SCREEN_NAME}               ${DATA_SOCIAL_SECURITY_NAME}
 
-    Set Selenium Speed    0
     Wait until element is visible                           ${MAP_ORIGIN_ACCOUNT_LIST}                                            10
     Click Element                                           ${MAP_ORIGIN_ACCOUNT_LIST}
 
@@ -46,13 +44,11 @@ The review payment screen should be successfully presented
     No Operation
 
 I fill out the service payment form with the right values
-    Set Selenium Speed    1
     Wait until element is visible                           ${MAP_SCREEN_NAME}                                           10
     ${VAR_SCREEN_NAME}                Get Text              ${MAP_SCREEN_NAME}
     ${VAR_SCREEN_NAME}                Convert To Uppercase  ${VAR_SCREEN_NAME}
     Should Be Equal As Strings                              ${VAR_SCREEN_NAME}               ${DATA_SERVICES_NAME}
 
-    Set Selenium Speed    0
     Wait until element is visible                           ${MAP_ORIGIN_ACCOUNT_LIST}                                            10
     Click Element                                           ${MAP_ORIGIN_ACCOUNT_LIST}
 
