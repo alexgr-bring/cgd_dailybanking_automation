@@ -71,8 +71,6 @@ I confirm the social security payment form
     Wait until element is visible                           ${MAP_CONFIRMATION_BUTTON}                                            10
     Click Element                                           ${MAP_CONFIRMATION_BUTTON}
 
-    Sleep    10s
-
     Verify if all the values on the review form are the same informed on the main form
 
 
