@@ -15,16 +15,16 @@ Variables      ../data/HomePage_data.py
 I am logged on the application
     [Arguments]   ${arg_username}   ${arg_password}
     I am in the login page
-    I inform my credentials           ${arg_username}    ${arg_password}
+    I inform my credentials   ${arg_username}   ${arg_password}
 
 I choose the Accounts menu option on Account and Cards section
-    Wait until element is visible     ${MAP_MENU_OPTION_ACCOUNTS}           10
-    Click Element                     ${MAP_MENU_OPTION_ACCOUNTS}
+    Wait until element is visible   ${MAP_MENU_OPTION_ACCOUNTS}   10
+    Click Element   ${MAP_MENU_OPTION_ACCOUNTS}
 
 I choose the Social Security menu option on Payments section
-    Wait until element is visible     ${MAP_MENU_OPTION_SOCIAL_SECURITY}    10
-    Click Element                     ${MAP_MENU_OPTION_SOCIAL_SECURITY}
+    Wait until element is visible   ${MAP_MENU_OPTION_SOCIAL_SECURITY}  10
+    Click Element   ${MAP_MENU_OPTION_SOCIAL_SECURITY}
 
 I choose the Services menu option on Payments section
-    Wait until element is visible     ${MAP_MENU_OPTION_SERVICES}    10
-    Click Element                     ${MAP_MENU_OPTION_SERVICES}
+    Wait until element is visible   ${MAP_MENU_OPTION_SERVICES}   10
+    Click Element   ${MAP_MENU_OPTION_SERVICES}

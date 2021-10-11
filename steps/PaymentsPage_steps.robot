@@ -17,67 +17,74 @@ Variables      ../data/PaymentsPage_data.py
 I fill out the social security payment form with the right values
     Set Selenium Speed    1
 
-    Wait until element is visible                           ${MAP_SCREEN_NAME}                                                    10
-    ${VAR_SCREEN_NAME}                Get Text              ${MAP_SCREEN_NAME}
-    ${VAR_SCREEN_NAME}                Convert To Uppercase  ${VAR_SCREEN_NAME}
-    Should Be Equal As Strings                              ${VAR_SCREEN_NAME}               ${DATA_SOCIAL_SECURITY_NAME}
+    Wait until element is visible   ${MAP_SCREEN_NAME}  10
+    ${VAR_SCREEN_NAME}  Get Text  ${MAP_SCREEN_NAME}
+    ${VAR_SCREEN_NAME}  Convert To Uppercase  ${VAR_SCREEN_NAME}
+    Should Be Equal As Strings  ${VAR_SCREEN_NAME}  ${DATA_SS_NAME}
 
-    Set Selenium Speed    0
+    Set Selenium Speed  0
 
-    Wait until element is visible                           ${MAP_ORIGIN_ACCOUNT_LIST}                                            10
-    Click Element                                           ${MAP_ORIGIN_ACCOUNT_LIST}
+    Wait until element is visible   ${MAP_SS_MAIN_ORIGIN_ACCOUNT_LIST}   10
+    Click Element   ${MAP_SS_MAIN_ORIGIN_ACCOUNT_LIST}
 
-    Wait until element is visible                           ${MAP_FIRST_ORIGIN_ACCOUNT}                                           10
-    Click Element                                           ${MAP_FIRST_ORIGIN_ACCOUNT}
+    Wait until element is visible   ${MAP_SS_MAIN_FIRST_ORIGIN_ACCOUNT}  10
+    Click Element   ${MAP_SS_MAIN_FIRST_ORIGIN_ACCOUNT}
 
-    Wait until element is visible                           ${MAP_BENEFICIARY_LIST}                                               10
-    Click Element                                           ${MAP_BENEFICIARY_LIST}
-    Select From List By Index                               ${MAP_BENEFICIARY_LIST}                                               1
+    Wait until element is visible   ${MAP_SS_MAIN_BENEFICIARY_LIST}  10
+    Click Element   ${MAP_SS_MAIN_BENEFICIARY_LIST}
+    Select From List By Index   ${MAP_SS_MAIN_BENEFICIARY_LIST}  1
 
-    Wait until element is visible                           ${MAP_TOTAL_AMOUNT}                                                  10
-    Input Text                                              ${MAP_TOTAL_AMOUNT}             ${DATA_TOTAL_AMOUNT}
+    Wait until element is visible   ${MAP_SS_MAIN_INTEGER_AMOUNT}  10
+    Input Text  ${MAP_SS_MAIN_INTEGER_AMOUNT}  ${DATA_SS_MAIN_INTEGER_AMOUNT}
 
-    Wait until element is visible                           ${MAP_TAX_ID}                                                         10
-    Press Keys                                              ${MAP_TAX_ID}                    ${DATA_TAX_ID}
+    Wait until element is visible   ${MAP_SS_MAIN_DECIMAL_AMOUNT}  10
+    Input Text  ${MAP_SS_MAIN_DECIMAL_AMOUNT}  ${DATA_SS_MAIN_DECIMAL_AMOUNT}
+
+    Wait until element is visible   ${MAP_SS_MAIN_TAX_ID}  10
+    Press Keys  ${MAP_SS_MAIN_TAX_ID}  ${DATA_SS_MAIN_TAX_ID}
 
 
 I fill out the service payment form with the right values
-    Set Selenium Speed    1
+    Set Selenium Speed  1
 
-    Wait until element is visible                           ${MAP_SCREEN_NAME}                                           10
-    ${VAR_SCREEN_NAME}                Get Text              ${MAP_SCREEN_NAME}
-    ${VAR_SCREEN_NAME}                Convert To Uppercase  ${VAR_SCREEN_NAME}
-    Should Be Equal As Strings                              ${VAR_SCREEN_NAME}               ${DATA_SERVICES_NAME}
+    Wait until element is visible   ${MAP_SCREEN_NAME}  10
+    ${VAR_SCREEN_NAME}  Get Text  ${MAP_SCREEN_NAME}
+    ${VAR_SCREEN_NAME}  Convert To Uppercase  ${VAR_SCREEN_NAME}
+    Should Be Equal As Strings  ${VAR_SCREEN_NAME}  ${DATA_SERV_NAME}
 
-    Set Selenium Speed    0
+    Set Selenium Speed  0
 
-    Wait until element is visible                           ${MAP_ORIGIN_ACCOUNT_LIST}                                            10
-    Click Element                                           ${MAP_ORIGIN_ACCOUNT_LIST}
+    Wait until element is visible   ${MAP_SERV_MAIN_ORIGIN_ACCOUNT_LIST}  10
+    Click Element   ${MAP_SERV_MAIN_ORIGIN_ACCOUNT_LIST}
 
-    Wait until element is visible                           ${MAP_FIRST_ORIGIN_ACCOUNT}                                           10
-    Click Element                                           ${MAP_FIRST_ORIGIN_ACCOUNT}
+    Wait until element is visible   ${MAP_SERV_MAIN_FIRST_ORIGIN_ACCOUNT}   10
+    Click Element   ${MAP_SERV_MAIN_FIRST_ORIGIN_ACCOUNT}
 
-    Wait until element is visible                           ${MAP_TOTAL_AMOUNT}                                                  10
-    Input Text                                              ${MAP_TOTAL_AMOUNT}             ${DATA_TOTAL_AMOUNT}
+    Wait until element is visible   ${MAP_SERV_MAIN_INTEGER_AMOUNT}   10
+    Input Text  ${MAP_SERV_MAIN_INTEGER_AMOUNT}   ${DATA_SERV_INTEGER_AMOUNT}
 
-    Wait until element is visible                           ${MAP_ENTITY_ID}                                                      10
-    Press Keys                                              ${MAP_ENTITY_ID}                 ${DATA_ENTITY_ID}
+    Wait until element is visible   ${MAP_SERV_MAIN_DECIMAL_AMOUNT}   10
+    Input Text  ${MAP_SERV_MAIN_DECIMAL_AMOUNT}   ${DATA_SERV_DECIMAL_AMOUNT}
 
-    Wait until element is visible                           ${MAP_REFERENCE_ID}                                                   10
-    Press Keys                                              ${MAP_REFERENCE_ID}              ${DATA_REFERENCE_ID}
+    Wait until element is visible   ${MAP_SERV_MAIN_ENTITY_ID}  10
+    Press Keys  ${MAP_SERV_MAIN_ENTITY_ID}  ${DATA_SERV_ENTITY_ID}
+
+    Wait until element is visible   ${MAP_SERV_MAIN_REFERENCE_ID}   10
+    Press Keys  ${MAP_SERV_MAIN_REFERENCE_ID}   ${DATA_SERV_REFERENCE_ID}
 
 
 I confirm the social security payment form
-    Wait until element is visible                           ${MAP_CONFIRMATION_BUTTON}                                            10
-    Click Element                                           ${MAP_CONFIRMATION_BUTTON}
+    Wait until element is visible   ${MAP_SS_MAIN_CONFIRMATION_BUTTON}  10
+    Click Element   ${MAP_SS_MAIN_CONFIRMATION_BUTTON}
 
-    Verify if all the values on the review form are the same informed on the main form
+    Verify if the values on the Social Security review page are the same as the main page
 
 
 I confirm service payment form
-    Wait until element is visible                           ${MAP_CONFIRMATION_BUTTON}                                            10
-    Click Element                                           ${MAP_CONFIRMATION_BUTTON}
+    Wait until element is visible   ${MAP_SERV_MAIN_CONFIRMATION_BUTTON}  10
+    Click Element   ${MAP_SERV_MAIN_CONFIRMATION_BUTTON}
 
+    Verify if the values on the Service review page are the same as the main page
 
 I submit the transfer on the review payment screen
     No Operation
