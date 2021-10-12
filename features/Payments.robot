@@ -24,7 +24,7 @@ Scenario: Submit a Social Security Payment Successfully
     And I submit the transfer on the review payment screen
 
 Scenario: Submit a Service Payment Successfully
-    [Tags]  SP1-AC1   alex
+    [Tags]  SP1-AC1   alexgr
 
     Given I am logged on the application  300000004  159357
     And I choose the Services menu option on Payments section

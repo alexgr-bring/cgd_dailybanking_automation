@@ -29,10 +29,12 @@ I fill out the social security payment form with the right values
 
     Wait until element is visible   ${MAP_SS_MAIN_FIRST_ORIGIN_ACCOUNT}  10
     Click Element   ${MAP_SS_MAIN_FIRST_ORIGIN_ACCOUNT}
+    ${VAR_SS_MAIN_IBAN_SELECTED}   Get Text  ${MAP_SS_MAIN_IBAN_SELECTED}
+    Set Suite Variable    ${VAR_SS_MAIN_IBAN_SELECTED}
 
     Wait until element is visible   ${MAP_SS_MAIN_BENEFICIARY_LIST}  10
     Click Element   ${MAP_SS_MAIN_BENEFICIARY_LIST}
-    Select From List By Index   ${MAP_SS_MAIN_BENEFICIARY_LIST}  1
+    Select From List by Value   ${MAP_SS_MAIN_BENEFICIARY_LIST}  ${DATA_SS_BENEFICIARY}
 
     Wait until element is visible   ${MAP_SS_MAIN_INTEGER_AMOUNT}  10
     Input Text  ${MAP_SS_MAIN_INTEGER_AMOUNT}  ${DATA_SS_MAIN_INTEGER_AMOUNT}
@@ -60,6 +62,10 @@ I fill out the service payment form with the right values
     Wait until element is visible   ${MAP_SERV_MAIN_FIRST_ORIGIN_ACCOUNT}   10
     Click Element   ${MAP_SERV_MAIN_FIRST_ORIGIN_ACCOUNT}
 
+    Wait until element is visible   ${MAP_SERV_MAIN_IBAN_SELECTED}   10
+    ${VAR_SERV_MAIN_IBAN_SELECTED}   Get Text  ${MAP_SERV_MAIN_IBAN_SELECTED}
+    Set Suite Variable  ${VAR_SERV_MAIN_IBAN_SELECTED}
+
     Wait until element is visible   ${MAP_SERV_MAIN_INTEGER_AMOUNT}   10
     Input Text  ${MAP_SERV_MAIN_INTEGER_AMOUNT}   ${DATA_SERV_INTEGER_AMOUNT}
 
@@ -71,20 +77,22 @@ I fill out the service payment form with the right values
 
     Wait until element is visible   ${MAP_SERV_MAIN_REFERENCE_ID}   10
     Press Keys  ${MAP_SERV_MAIN_REFERENCE_ID}   ${DATA_SERV_REFERENCE_ID}
+    ${VAR_SERV_MAIN_REFERENCE_ID}   Get Text  ${MAP_SERV_MAIN_REFERENCE_ID}
+    Set Suite Variable  ${VAR_SERV_MAIN_REFERENCE_ID}
 
 
 I confirm the social security payment form
     Wait until element is visible   ${MAP_SS_MAIN_CONFIRMATION_BUTTON}  10
     Click Element   ${MAP_SS_MAIN_CONFIRMATION_BUTTON}
 
-    Verify if the values on the Social Security review page are the same as the main page
+    Verify if the values on the Social Security review page are the same as the SS main page
 
 
 I confirm service payment form
     Wait until element is visible   ${MAP_SERV_MAIN_CONFIRMATION_BUTTON}  10
     Click Element   ${MAP_SERV_MAIN_CONFIRMATION_BUTTON}
 
-    Verify if the values on the Service review page are the same as the main page
+    Verify if the values on the Service review page are the same as the Serv main page
 
 I submit the transfer on the review payment screen
     No Operation
