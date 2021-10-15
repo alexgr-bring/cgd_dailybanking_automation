@@ -21,13 +21,13 @@ Scenario: Submit a Social Security Payment Successfully
     And I choose the Social Security menu option on Payments section
     And I fill out the social security payment form with the right values
     When I confirm the social security payment form
-    And I submit the transfer on the review payment screen
+    And I submit the payment on the review payment screen
 
 Scenario: Submit a Service Payment Successfully
-    [Tags]  SP1-AC1   alexgr
+    [Tags]  SP1-AC1
 
     Given I am logged on the application  300000004  159357
     And I choose the Services menu option on Payments section
     And I fill out the service payment form with the right values
     When I confirm service payment form
-    And I submit the transfer on the review payment screen
+    And I submit the payment on the review payment screen

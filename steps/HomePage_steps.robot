@@ -21,14 +21,14 @@ I choose the Accounts menu option on Account and Cards section
     Wait until element is visible   ${MAP_MENU_OPTION_ACCOUNTS}   10
     Click Element   ${MAP_MENU_OPTION_ACCOUNTS}
 
+I choose the International Account menu option on Transfers section
+    Wait until element is visible   ${MAP_MENU_OPTION_INTERNATIONAL_ACCOUNTS}   10
+    Click Element   ${MAP_MENU_OPTION_INTERNATIONAL_ACCOUNTS}
+
 I choose the Social Security menu option on Payments section
     Wait until element is visible   ${MAP_MENU_OPTION_SOCIAL_SECURITY}  10
     Click Element   ${MAP_MENU_OPTION_SOCIAL_SECURITY}
 
-I choose the International Account menu option on Transfers section
+I choose the Services menu option on Payments section
     Wait until element is visible   ${MAP_MENU_OPTION_SERVICES}   10
     Click Element   ${MAP_MENU_OPTION_SERVICES}
-
-I choose the Services menu option on Payments section
-    Wait until element is visible   ${MAP_MENU_OPTION_INTERNATIONAL_ACCOUNTS}   10
-    Click Element   ${MAP_MENU_OPTION_INTERNATIONAL_ACCOUNTS}

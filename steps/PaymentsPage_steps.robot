@@ -3,6 +3,7 @@
 
 Library        SeleniumLibrary
 Library        BuiltIn
+Library        ../support/OTP.py
 
 Resource      ../keywords/PaymentsPage_keywords.robot
 
@@ -94,5 +95,7 @@ I confirm service payment form
 
     Verify if the values on the Service review page are the same as the Serv main page
 
-I submit the transfer on the review payment screen
-    No Operation
+
+I submit the payment on the review payment screen
+    #${OTP}  generate otp  "1NcRfUjXn2r4u7x!A%D*G-KaPdSgVkYp"  "+351960292976"
+    #Log To Console    ${OTP}

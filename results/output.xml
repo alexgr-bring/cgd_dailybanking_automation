@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on darwin)" generated="20211015 17:59:39.208" rpa="false" schemaversion="2">
+<suite id="s1" name="Transfers" source="/Users/alexandrereboucas/Desktop/CGD_daily-banking-web/features/transfers.robot">
+<test id="s1-t1" name="Scenario: Submit a transfer between International Accounts Successfully">
+<kw name="Open Web browser" library="Hooks" type="SETUP">
+<arg>https://app.tst.cgd.live.backbaseservices.com/business-banking-app</arg>
+<arg>firefox</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211015 17:59:39.457" level="INFO">Opening browser 'firefox' to base url 'https://app.tst.cgd.live.backbaseservices.com/business-banking-app'.</msg>
+<msg timestamp="20211015 17:59:39.459" level="INFO">Firefox driver log is always forced to to: /Users/alexandrereboucas/Desktop/CGD_daily-banking-web/results/geckodriver-41.log</msg>
+<status status="PASS" starttime="20211015 17:59:39.457" endtime="20211015 17:59:43.969"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211015 17:59:43.969" endtime="20211015 17:59:44.567"/>
+</kw>
+<status status="PASS" starttime="20211015 17:59:39.456" endtime="20211015 17:59:44.568"/>
+</kw>
+<kw name="Given I am logged on the application" library="HomePage_steps">
+<arg>300000099</arg>
+<arg>666777</arg>
+<kw name="I am in the login page" library="LoginPage_steps">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_WELCOME_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:44.569" endtime="20211015 17:59:45.009"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:45.009" endtime="20211015 17:59:45.024"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:45.025" endtime="20211015 17:59:45.038"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_LOGIN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:45.039" endtime="20211015 17:59:45.054"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${VAR_WELCOME}</var>
+<arg>${MAP_WELCOME_MESSAGE}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:45.070" level="INFO">${VAR_WELCOME} = A Caixa dá as boas-vindas à sua empresa.</msg>
+<status status="PASS" starttime="20211015 17:59:45.054" endtime="20211015 17:59:45.070"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${VAR_WELCOME}</arg>
+<arg>${DATA_WELCOME_MESSAGE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20211015 17:59:45.070" endtime="20211015 17:59:45.070"/>
+</kw>
+<status status="PASS" starttime="20211015 17:59:44.569" endtime="20211015 17:59:45.071"/>
+</kw>
+<kw name="I inform my credentials" library="LoginPage_steps">
+<arg>${arg_username}</arg>
+<arg>${arg_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MAP_USERNAME}</arg>
+<arg>${arg_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:45.072" level="INFO">Typing text '300000099' into text field 'xpath://input[@id="username"]'.</msg>
+<status status="PASS" starttime="20211015 17:59:45.071" endtime="20211015 17:59:45.088"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MAP_PASSWORD}</arg>
+<arg>${arg_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:45.089" level="INFO">Typing text '666777' into text field 'xpath://input[@id="password"]'.</msg>
+<status status="PASS" starttime="20211015 17:59:45.088" endtime="20211015 17:59:45.109"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAP_LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:45.109" level="INFO">Clicking element 'xpath://input[@id="kc-login"]'.</msg>
+<status status="PASS" starttime="20211015 17:59:45.109" endtime="20211015 17:59:45.658"/>
+</kw>
+<status status="PASS" starttime="20211015 17:59:45.071" endtime="20211015 17:59:45.658"/>
+</kw>
+<status status="PASS" starttime="20211015 17:59:44.568" endtime="20211015 17:59:45.658"/>
+</kw>
+<kw name="And I choose the International Account menu option on Transfers section" library="HomePage_steps">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_MENU_OPTION_INTERNATIONAL_ACCOUNTS}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:45.659" endtime="20211015 17:59:52.311"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAP_MENU_OPTION_INTERNATIONAL_ACCOUNTS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:52.311" level="INFO">Clicking element '//li[@class="bb-navigation__item"]//child::a[@href="#/contas-internacionais"]'.</msg>
+<status status="PASS" starttime="20211015 17:59:52.311" endtime="20211015 17:59:52.338"/>
+</kw>
+<status status="PASS" starttime="20211015 17:59:45.658" endtime="20211015 17:59:52.338"/>
+</kw>
+<kw name="And I fill out the International Account Transfer form with the right values" library="TransfersPage_steps">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211015 17:59:52.339" endtime="20211015 17:59:52.340"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_SCREEN_NAME}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:52.340" endtime="20211015 17:59:54.550"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${VAR_SCREEN_NAME}</var>
+<arg>${MAP_SCREEN_NAME}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:56.570" level="INFO">${VAR_SCREEN_NAME} = Contas internacionais</msg>
+<status status="PASS" starttime="20211015 17:59:54.550" endtime="20211015 17:59:56.570"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${VAR_SCREEN_NAME}</var>
+<arg>${VAR_SCREEN_NAME}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20211015 17:59:56.571" level="INFO">${VAR_SCREEN_NAME} = CONTAS INTERNACIONAIS</msg>
+<status status="PASS" starttime="20211015 17:59:56.570" endtime="20211015 17:59:56.571"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${VAR_SCREEN_NAME}</arg>
+<arg>${DATA_INTER_ACC_TRANSF_NAME}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20211015 17:59:56.571" endtime="20211015 17:59:56.572"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211015 17:59:56.572" endtime="20211015 17:59:56.572"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_ORIGIN_ACCOUNT_LIST}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:56.572" endtime="20211015 17:59:56.590"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_ORIGIN_ACCOUNT_LIST}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:56.590" level="INFO">Clicking element 'xpath://span[@class="ng-arrow-wrapper"]'.</msg>
+<status status="PASS" starttime="20211015 17:59:56.590" endtime="20211015 17:59:56.888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_FIRST_ORIGIN_ACCOUNT}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:56.888" endtime="20211015 17:59:56.905"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_FIRST_ORIGIN_ACCOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:56.906" level="INFO">Clicking element 'xpath://div[@class="bb-product-item bb-product-item-basic-account-ui product-item"]//div//div//div//div[1]//div[2]//bb-ellipsis-ui/div'.</msg>
+<status status="PASS" starttime="20211015 17:59:56.905" endtime="20211015 17:59:57.175"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${VAR_INTER_ACC_TRANS_MAIN_ORIGIN_ACCOUNT_SELECTED}</var>
+<arg>${MAP_INTER_ACC_TRANS_MAIN_ORIGIN_ACCOUNT_SELECTED}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:57.202" level="INFO">${VAR_INTER_ACC_TRANS_MAIN_ORIGIN_ACCOUNT_SELECTED} = PT50 0035 0325 0090 0884 0303 5</msg>
+<status status="PASS" starttime="20211015 17:59:57.175" endtime="20211015 17:59:57.202"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>${VAR_INTER_ACC_TRANS_MAIN_ORIGIN_ACCOUNT_SELECTED}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20211015 17:59:57.203" level="INFO">${VAR_INTER_ACC_TRANS_MAIN_ORIGIN_ACCOUNT_SELECTED} = PT50 0035 0325 0090 0884 0303 5</msg>
+<status status="PASS" starttime="20211015 17:59:57.203" endtime="20211015 17:59:57.203"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_LIST}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:57.203" endtime="20211015 17:59:57.222"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_LIST}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:57.223" level="INFO">Clicking element 'xpath://button[@class="dropdown-toggle btn-outline-secondary btn btn-md"]'.</msg>
+<status status="PASS" starttime="20211015 17:59:57.223" endtime="20211015 17:59:57.458"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_SELECTED}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:57.458" endtime="20211015 17:59:57.473"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_SELECTED}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:57.474" level="INFO">Clicking element 'xpath://bb-beneficiary-selector-contact[1]//button[@type="button"]'.</msg>
+<status status="PASS" starttime="20211015 17:59:57.473" endtime="20211015 17:59:57.732"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_IBAN}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:57.732" endtime="20211015 17:59:57.748"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${VAR_INTER_ACC_TRANSF_MAIN_IBAN}</var>
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_IBAN}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20211015 17:59:57.756" level="INFO">${VAR_INTER_ACC_TRANSF_MAIN_IBAN} = PT50 0027 0000 0001 2345 6783 3</msg>
+<status status="PASS" starttime="20211015 17:59:57.748" endtime="20211015 17:59:57.757"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MAP_INTER_ACC_TRANSF_MAIN_ALERT_MSG}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211015 17:59:57.757" endtime="20211015 17:59:57.771"/>
+</kw>
+<status status="PASS" starttime="20211015 17:59:52.338" endtime="20211015 17:59:57.771"/>
+</kw>
+<tag>alexgr</tag>
+<tag>SP1-AC1</tag>
+<status status="PASS" starttime="20211015 17:59:39.455" endtime="20211015 17:59:57.772"/>
+</test>
+<status status="PASS" starttime="20211015 17:59:39.209" endtime="20211015 17:59:57.773"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">alexgr</stat>
+<stat pass="1" fail="0" skip="0">SP1-AC1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Transfers">Transfers</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
