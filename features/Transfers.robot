@@ -20,5 +20,6 @@ Scenario: Submit a transfer between International Accounts Successfully
     Given I am logged on the application  300000099  666777
     And I choose the International Account menu option on Transfers section
     And I fill out the International Account Transfer form with the right values
-    #When I confirm the social security payment form
-    #And I submit the transfer on the review payment screen
+    When I confirm the International Account transfer form
+    And I submit the transfer on the review payment screen
+    Then I must be requested to inform the OTP validation code

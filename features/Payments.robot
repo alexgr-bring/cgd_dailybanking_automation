@@ -22,6 +22,7 @@ Scenario: Submit a Social Security Payment Successfully
     And I fill out the social security payment form with the right values
     When I confirm the social security payment form
     And I submit the payment on the review payment screen
+    Then I must be requested to inform the OTP validation code
 
 Scenario: Submit a Service Payment Successfully
     [Tags]  SP1-AC1
@@ -31,3 +32,4 @@ Scenario: Submit a Service Payment Successfully
     And I fill out the service payment form with the right values
     When I confirm service payment form
     And I submit the payment on the review payment screen
+    Then I must be requested to inform the OTP validation code

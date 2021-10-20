@@ -30,6 +30,7 @@ I fill out the International Account Transfer form with the right values
     Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_FIRST_ORIGIN_ACCOUNT}  10
     Click Element   ${MAP_INTER_ACC_TRANSF_MAIN_FIRST_ORIGIN_ACCOUNT}
 
+    Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_ORIGIN_ACCOUNT_SELECTED}  10
     ${VAR_INTER_ACC_TRANSF_MAIN_ORIGIN_ACCOUNT_SELECTED}   Get Text  ${MAP_INTER_ACC_TRANSF_MAIN_ORIGIN_ACCOUNT_SELECTED}
     Set Suite Variable    ${VAR_INTER_ACC_TRANSF_MAIN_ORIGIN_ACCOUNT_SELECTED}
 
@@ -39,8 +40,9 @@ I fill out the International Account Transfer form with the right values
     Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_SELECTED}  10
     Click Element   ${MAP_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_SELECTED}
 
-    Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_IBAN}  10
-    ${VAR_INTER_ACC_TRANSF_MAIN_IBAN}   Get Value  ${MAP_INTER_ACC_TRANSF_MAIN_IBAN}
+    Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_IBAN}  10
+    ${VAR_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_IBAN}   Get Value  ${MAP_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_IBAN}
+    Set Suite Variable  ${VAR_INTER_ACC_TRANSF_MAIN_DESTINATION_ACCOUNT_IBAN}
 
     Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_ALERT_MSG}  10
 
@@ -56,11 +58,17 @@ I fill out the International Account Transfer form with the right values
     Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_NORMAL_TRANSF_TYPE}  10
     Click Element   ${MAP_INTER_ACC_TRANSF_MAIN_NORMAL_TRANSF_TYPE}
 
-    Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_CALENDAR}  10
-    Click Element   ${MAP_INTER_ACC_TRANSF_MAIN_CALENDAR}
-
     Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_SCHEDULED_DATE}  10
-    Click Element   ${MAP_INTER_ACC_TRANSF_MAIN_SCHEDULED_DATE}
+    Input Text  ${MAP_INTER_ACC_TRANSF_MAIN_SCHEDULED_DATE}   ${DATA_INTER_ACC_TRANSF_MAIN_SCHEDULED_DATE}
 
+
+I confirm the International Account transfer form
     Wait until element is visible   ${MAP_INTER_ACC_TRANSF_MAIN_CONFIRMATION_BUTTON}  10
     Click Element   ${MAP_INTER_ACC_TRANSF_MAIN_CONFIRMATION_BUTTON}
+
+    Verify if the values on the International Account review page are the same as the IACC main page
+
+
+I submit the transfer on the review payment screen
+    Wait until element is visible   ${MAP_INTER_ACC_TRANSF_REVIEW_CONFIRMATION_BUTTON}  10
+    Click Element   ${MAP_INTER_ACC_TRANSF_REVIEW_CONFIRMATION_BUTTON}
