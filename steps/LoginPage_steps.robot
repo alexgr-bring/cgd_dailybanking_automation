@@ -27,6 +27,7 @@ I inform my credentials
     Input Text  ${MAP_USERNAME}   ${arg_username}
     Input Text  ${MAP_PASSWORD}   ${arg_password}
     Click Element   ${MAP_LOGIN_BUTTON}
+    Run Keyword And Ignore Error  I must select which Context I want to use
 
 I need to receive an error message not allowing me to proceed
     Wait until element is visible   ${MAP_INVALID_CREDENTIAL_MESSAGE}   10
@@ -36,3 +37,7 @@ I must be taken to my homepage
     ${VAR_CLIENT_NAME}  Get Text  ${MAP_CLIENT_NAME}
     ${VAR_CLIENT_NAME}  Convert To Uppercase  ${VAR_CLIENT_NAME}
     Should Be Equal As Strings  ${VAR_CLIENT_NAME}  ${DATA_CLIENT_NAME}
+
+I must select which Context I want to use
+    Wait until element is visible   xpath://div[@class="list-group-item list-group-item-action bb-select-context__item first"]  10
+    Click Element  xpath://div[@class="list-group-item list-group-item-action bb-select-context__item first"]
