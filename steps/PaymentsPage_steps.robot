@@ -97,4 +97,5 @@ I confirm service payment form
 
 
 I submit the payment on the review payment screen
-    No Operation
+    Wait until element is visible   ${MAP_SS_REVIEW_CONFIRMATION_BUTTON}  10
+    Click Element   ${MAP_SS_REVIEW_CONFIRMATION_BUTTON}

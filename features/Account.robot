@@ -16,6 +16,8 @@ Test Setup      Open Web browser  https://app.tst.cgd.live.backbaseservices.com/
 *** Test Cases ***
 
 Scenario: Verify All the Accounts Associated to the User
+    [Tags]
+
     Given I am logged on the application  300000004  159357
     And I choose the Accounts menu option on Account and Cards section
     When I need to see all the accounts associated to me

@@ -18,6 +18,7 @@ MAP_SS_REVIEW_BENEFICIARY = 'xpath://fieldset[@class="bb-fieldset"]//child::div[
 MAP_SS_REVIEW_TAX_ID = 'xpath://fieldset[@class="bb-fieldset"]//child::div[3]//child::div[1]//span'
 MAP_SS_REVIEW_TRANSACTION_COSTS_INTEGER = 'xpath://fieldset[@class="bb-fieldset"]//child::div[5]//child::div[2]//bb-amount-ui//span//span//span[2]'
 MAP_SS_REVIEW_TRANSACTION_COSTS_DECIMAL = 'xpath://fieldset[@class="bb-fieldset"]//child::div[5]//child::div[2]//bb-amount-ui//span//span//span[4]'
+MAP_SS_REVIEW_CONFIRMATION_BUTTON = 'xpath://button[@data-role="submit-button"]'
 
 #Services Screen
 MAP_SERV_MAIN_ORIGIN_ACCOUNT_LIST = 'xpath://span[@class="ng-arrow-wrapper"]'
@@ -38,3 +39,4 @@ MAP_SERV_REVIEW_INTEGER_AMOUNT = 'xpath://fieldset[@class="bb-fieldset"]//child:
 MAP_SERV_REVIEW_DECIMAL_AMOUNT = 'xpath://fieldset[@class="bb-fieldset"]//child::div[4]//span[2]//bb-amount-ui//span/span[1]/span[@class="decimals"]'
 MAP_SERV_REVIEW_TRANSACTION_COSTS_INTEGER = 'xpath://fieldset[@class="bb-fieldset"]//child::div[7]//div//bb-amount-ui//span//span//span[@class="integer"]'
 MAP_SERV_REVIEW_TRANSACTION_COSTS_DECIMAL = 'xpath://fieldset[@class="bb-fieldset"]//child::div[7]//div//bb-amount-ui//span//span//span[@class="decimals"]'
+MAP_SERV_REVIEW_CONFIRMATION_BUTTON = 'xpath://button[@data-role="submit-button"]'
