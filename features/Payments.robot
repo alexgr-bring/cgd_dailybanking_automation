@@ -17,7 +17,7 @@ Test Setup      Open Web browser  https://app.tst.cgd.live.backbaseservices.com/
 *** Test Cases ***
 
 Scenario: Submit a Social Security Payment Successfully
-    [Tags]
+    [Tags]  alexgr
 
     Given I am logged on the application  300000098  666777
     And I choose the Social Security menu option on Payments section

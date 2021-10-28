@@ -3,7 +3,6 @@
 
 Library        SeleniumLibrary
 Library        BuiltIn
-Library        ../support/OTP.py
 
 Resource      ../keywords/PaymentsPage_keywords.robot
 
